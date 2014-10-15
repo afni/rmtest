@@ -30,8 +30,7 @@ their ever-growing size.  The file afni_aux.ps contains documentation
 for almost all of the command line programs included in the AFNI package.
 There are also individual .ps files for each of these programs.
 
-zARCHIVES
---------
+ARCHIVES
 AFNI files are tar-ed and gzip-ed archives.  If you don't have GNU gzip,
 you will find the archive for gzip on the computer system whence you got
 the AFNI distribution.  To make the executable file 'gzip', the following
