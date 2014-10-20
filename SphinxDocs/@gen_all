@@ -1,0 +1,44 @@
+#!/bin/tcsh -f
+
+if ("$1" =~ "-h*") then
+   echo ""
+   echo "A script to recreate GUI help files that go under SUMA/auto_inc"
+   echo "Don't run this script unless you know you need to do so."
+   echo ""
+   echo "Normally, you just need to run:"
+   echo "" 
+   echo "      make html"
+   echo ""
+   goto END
+endif
+
+
+\rm SUMA/auto_inc/SurfCont_help.inc \
+    SUMA/auto_inc/Mouse_Key_help.inc \
+    SUMA/auto_inc/TractCont_help.inc
+
+suma -drive_com '-com surf_cont -view_surf_cont y'          \
+     -drive_com                                             \
+        '-com surf_cont -write_mouse_keyb_sphinx_help       \
+                     SUMA/auto_inc/Mouse_Keyb_help.inc'     \
+     -drive_com                                             \
+        '-com surf_cont -write_mouse_cmap_keyb_sphinx_help  \
+                     SUMA/auto_inc/Mouse_Cmap_Keyb_help.inc'\
+     -drive_com                                             \
+        '-com surf_cont -write_surf_cont_sphinx_help        \
+                     SUMA/auto_inc/SurfCont_help.inc'       \
+     -drive_com '-com kill_suma'
+
+suma -tract ~/.afni/data/samples/o.NETS_OR_000.niml.tract   \
+     -drive_com '-com surf_cont -view_surf_cont y'          \
+     -drive_com '-com surf_cont -2xmasks'                   \
+     -drive_com                                             \
+        '-com surf_cont -write_tract_cont_sphinx_help        \
+                     SUMA/auto_inc/TractCont_help.inc'       \
+     -drive_com '-com kill_suma'
+         
+
+make html
+
+
+END:
