@@ -10,6 +10,7 @@ Contents:
 
 .. toctree::
    :maxdepth: 4
+   :numbered:
 
    SUMA/cover
    SUMA/highlights
