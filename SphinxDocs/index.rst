@@ -19,6 +19,7 @@ Contents:
    SUMA/DrawingROIs
    tutorials/WalnutBrain/WalnutBrain
    installations/SmallInstalls/DemoData
+   installations/FATCAT_Demo/FATCAT_All
    installations/FATCAT_Demo/FATCAT_Demo
    installations/TemplateSurfaces/TemplateSurfaces
    glossary
