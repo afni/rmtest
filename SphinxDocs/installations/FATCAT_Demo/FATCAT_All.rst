@@ -89,5 +89,5 @@ available for estimating the main directions of tract propagation,
 though the degree of integrability with FATCAT may vary. One example
 of using `DSI-Studio <http://dsi-studio.labsolver.org/>`_ to perform
 HARDI modeling and converting the output to be 3dTrackID-able is
-provided in the FATCAT demo: :kbd:`FATCAT_DEMO/HARDI/do_dsistudio.tcsh`.
+provided in the FATCAT demo:  ``FATCAT_DEMO/HARDI/do_dsistudio.tcsh``.
 
